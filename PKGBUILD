@@ -43,7 +43,5 @@ package() {
 	cd "${srcdir}/opensiv3d/Linux/build"
 	make DESTDIR="${pkgdir}/" install
 
-	cp "${srcdir}/opensiv3d/Linux/build/libSiv3D.a" "${pkgdir}/usr/lib/"
-
 	sed -i -e 's/opencv4/opencv/' ${srcdir}/opensiv3d/Linux/CMakeLists.txt
 }
